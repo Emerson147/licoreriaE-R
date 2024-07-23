@@ -7,7 +7,11 @@ import { products } from '@wix/stores';
 
 const PRODUCT_PER_PAGE = 20;
 
-const ProductList =  async ({ categoryId, limit }:{categoryId:string; limit?:number;}) => {
+const ProductList =  async ({
+   categoryId, 
+   limit, searchParams }:
+   {categoryId:string; 
+    limit?:number; searchParams?: any}) => {
 
 
   const wixClient = await wixClientServer();
